@@ -2,8 +2,8 @@ function createTable() {
   const table = document.getElementById("myTable");
   table.innerHTML = ""; // Clear old content
 
-  const rows = parseInt(prompt("Enter number of rows:"));
-  const cols = parseInt(prompt("Enter number of columns:"));
+  const rows = parseInt(prompt("Input number of rows"));
+  const cols = parseInt(prompt("Input number of columns"));
 
   // Input validation
   if (rows <= 0 || cols <= 0 || isNaN(rows) || isNaN(cols)) {
@@ -20,7 +20,7 @@ function createTable() {
 
     for (let j = 0; j < cols; j++) {
       const cell = document.createElement(i === 0 ? "th" : "td");
-      cell.innerHTML = `Row-${i + 1} Column-${j + 1}`;
+      cell.innerHTML = `Row-${i} Column-${j}`;
       tr.appendChild(cell);
     }
 
